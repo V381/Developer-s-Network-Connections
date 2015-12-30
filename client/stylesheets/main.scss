@@ -1,0 +1,340 @@
+@import "reset";
+@include meyer-reset();
+
+
+$defaultBlueColor : #4175C1;
+$followButtonBg : #CDCCD1;
+
+.container{
+  max-width: 960px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.dev{
+  overflow: hidden;
+}
+
+.devName{
+  overflow: hidden;
+  width: 33%;
+  float: left;
+  img{
+    width: 100px;
+    height: 100px;
+    float: left;
+    padding-right: 10px;
+    border-radius: 8px;
+  }
+  .devName{
+    font-weight: bold;
+    font-size: 1.5em;
+    width: 60%;
+  }
+  a{
+    color: black;
+  }
+}
+
+.devStats{
+  width: 50%;
+  float: left;
+  padding-left: 20px;
+  padding-right: 20px;
+  position: relative;
+  top: -20px;
+  ul{
+    li{
+      display: inline-block;
+      color: $defaultBlueColor;
+      font-size: 4em;
+      font-weight: bold;
+      padding-left: 10px;
+      text-align: center;
+      width: 30%;
+      span{
+        display: block;
+        font-size: 20px;
+        color: gray;
+      }
+    }
+  }
+}
+
+
+.devDetails{
+
+  .follow{
+    padding: 12px;
+    background-color: $followButtonBg;
+    color: white;
+    border-radius: 8px;
+    border: 1px solid $followButtonBg;
+    &:hover{
+      background-color: lighten(#CDCCD1, 10%);
+      color: black;
+    }
+  }
+
+  .details{
+    background: $defaultBlueColor;
+    padding: 12px;
+    color: white;
+    border-radius: 8px;
+    border: 1px solid $defaultBlueColor;
+    a{
+      color: white;
+    }
+    &:hover{
+      background-color: lighten($defaultBlueColor, 10%);
+    }
+  }
+
+}
+
+.sortBy{
+  overflow: hidden;
+  button{
+    background-color: $defaultBlueColor;
+    padding: 12px;
+    color: white;
+    border-radius: 8px;
+    border: 1px solid $defaultBlueColor;
+    &:hover{
+      background-color: lighten($defaultBlueColor, 10%);
+    }
+  }
+}
+
+.bToList{
+  background-color: $defaultBlueColor;
+  padding: 12px;
+  color: white;
+  border-radius: 8px;
+  border: 1px solid $defaultBlueColor;
+  &:hover{
+    background-color: lighten($defaultBlueColor, 10%);
+  }
+  a{
+    color: white;
+  }
+}
+
+
+.detailsLeft{
+  text-align: justify;
+  > p{
+    padding-top: 20px;
+  }
+  img{
+    width: 70%;
+  }
+  h1{
+    width: 60%;
+    font-size: 1.0em;
+    span{
+      width: 40px;
+    }
+  }
+  .devName{
+    font-size: 3.8em;
+    font-weight: bold;
+  }
+  .devLogin{
+    font-size: 3em;
+    color: gray;
+    font-weight: 100;
+    padding: 0;
+  }
+  width: 40%;
+  p{
+    width: 70%;
+    text-align: justify;
+  }
+  span{
+    width: 30px;
+  }
+
+  span{
+    width: 10%;
+  }
+
+  .devMail{
+    display: inline;
+    width: 30%;
+    font-size: 1.5em;
+    .relativePos{
+      position: relative;
+      left: -5px;
+    }
+    span{
+      color: black;
+    }
+  }
+
+  ul{
+    li{
+      display: inline-block;
+      color: $defaultBlueColor;
+      font-size: 2em;
+      font-weight: bold;
+      padding-left: 10px;
+      text-align: center;
+      width: 20%;
+      span{
+        display: block;
+        font-size: 15px;
+        color: gray;
+      }
+    }
+  }
+  float: left;
+  overflow: hidden;
+}
+
+.friendsList{
+  width: 60%;
+  float: left;
+  position: relative;
+  top: -25px;
+  h1{
+    font-style: italic;
+  }
+  ul{
+    display: inline-block;
+    width: 50%;
+    height: 30%;
+    li{
+      display: inline-block;
+      padding: 10px;
+      background-color: #2f8004;
+      color: white;
+      width: 80%;
+      &:hover{
+        background-color: lighten(#2f8004, 5%);
+      }
+      a{
+        color: white;
+      }
+    }
+  }
+
+}
+
+.mutualLocation{
+  @extend .friendsList;
+  z-index: 1;
+  display: block;
+  height: 0;
+  ul{
+    li{
+      position: relative;
+      top: 15px;
+      background-color: #ff19cb;
+      &:hover{
+        background-color: lighten(#ff19cb, 10%);
+      }
+    }
+  }
+}
+
+.clear{
+  clear: both;
+}
+
+.suggestedFriends{
+  float: left;
+  h1{
+    font-style: italic;
+  }
+}
+
+.followUser{
+  @extend .bToList;
+  background-color: #CDCCD1;
+  border: 1px solid #CDCCD1;
+  &:hover{
+    background-color: lighten(#CDCCD1, 10%);
+    color: black;
+  }
+}
+
+
+
+@media all and(max-width: 990px) {
+  .devStats{
+    ul{
+      li{
+        font-size: 2.5em;
+        padding-right: 10px;
+        span{
+          font-size: 0.3em;
+        }
+      }
+    }
+  }
+}
+
+@media all and(max-width: 560px){
+
+  .devName{
+    text-align: center;
+  }
+
+  .sortBy{
+    button{
+      width: 50%;
+      display: block;
+    }
+  }
+
+  .devStats{
+    text-align: center;
+    ul{
+      li{
+        display: block;
+        font-size: 2em;
+        padding: 10px;
+        span{
+          font-size: 0.3em;
+        }
+      }
+    }
+  }
+
+  .devDetails{
+    margin: 0 auto;
+    button{
+      float: left;
+      width: 50%;
+    }
+  }
+}
+
+.friendsOfFriends{
+  @extend .friendsList;
+  ul{
+    li{
+      background-color: #3bcd16;
+      &:hover{
+        background-color: lighten(#3bcd16, 10%);
+      }
+    }
+  }
+}
+
+.suggestedFriends{
+  @extend .friendsList;
+  ul{
+    li{
+      background-color: #ffb90a;
+      &:hover{
+        background-color: lighten(#ffb90a, 10%);
+      }
+    }
+  }
+}
+
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none !important;
+}

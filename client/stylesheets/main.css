@@ -1,0 +1,267 @@
+div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after {
+  content: "";
+  content: none; }
+
+q:before, q:after {
+  content: "";
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+.container {
+  max-width: 960px;
+  width: 100%;
+  margin: 0 auto; }
+
+.dev {
+  overflow: hidden; }
+
+.devName {
+  overflow: hidden;
+  width: 33%;
+  float: left; }
+  .devName img {
+    width: 100px;
+    height: 100px;
+    float: left;
+    padding-right: 10px;
+    border-radius: 8px; }
+  .devName .devName {
+    font-weight: bold;
+    font-size: 1.5em;
+    width: 60%; }
+  .devName a {
+    color: black; }
+
+.devStats {
+  width: 50%;
+  float: left;
+  padding-left: 20px;
+  padding-right: 20px;
+  position: relative;
+  top: -20px; }
+  .devStats ul li {
+    display: inline-block;
+    color: #4175c1;
+    font-size: 4em;
+    font-weight: bold;
+    padding-left: 10px;
+    text-align: center;
+    width: 30%; }
+    .devStats ul li span {
+      display: block;
+      font-size: 20px;
+      color: gray; }
+
+.devDetails .follow {
+  padding: 12px;
+  background-color: #cdccd1;
+  color: white;
+  border-radius: 8px;
+  border: 1px solid #cdccd1; }
+  .devDetails .follow:hover {
+    background-color: #e7e7e9;
+    color: black; }
+.devDetails .details {
+  background: #4175c1;
+  padding: 12px;
+  color: white;
+  border-radius: 8px;
+  border: 1px solid #4175c1; }
+  .devDetails .details a {
+    color: white; }
+  .devDetails .details:hover {
+    background-color: #6791ce; }
+
+.sortBy {
+  overflow: hidden; }
+  .sortBy button {
+    background-color: #4175c1;
+    padding: 12px;
+    color: white;
+    border-radius: 8px;
+    border: 1px solid #4175c1; }
+    .sortBy button:hover {
+      background-color: #6791ce; }
+
+.bToList, .followUser {
+  background-color: #4175c1;
+  padding: 12px;
+  color: white;
+  border-radius: 8px;
+  border: 1px solid #4175c1; }
+  .bToList:hover, .followUser:hover {
+    background-color: #6791ce; }
+  .bToList a, .followUser a {
+    color: white; }
+
+.detailsLeft {
+  text-align: justify;
+  width: 40%;
+  float: left;
+  overflow: hidden; }
+  .detailsLeft > p {
+    padding-top: 20px; }
+  .detailsLeft img {
+    width: 70%; }
+  .detailsLeft h1 {
+    width: 60%;
+    font-size: 1.0em; }
+    .detailsLeft h1 span {
+      width: 40px; }
+  .detailsLeft .devName {
+    font-size: 3.8em;
+    font-weight: bold; }
+  .detailsLeft .devLogin {
+    font-size: 3em;
+    color: gray;
+    font-weight: 100;
+    padding: 0; }
+  .detailsLeft p {
+    width: 70%;
+    text-align: justify; }
+  .detailsLeft span {
+    width: 30px; }
+  .detailsLeft span {
+    width: 10%; }
+  .detailsLeft .devMail {
+    display: inline;
+    width: 30%;
+    font-size: 1.5em; }
+    .detailsLeft .devMail .relativePos {
+      position: relative;
+      left: -5px; }
+    .detailsLeft .devMail span {
+      color: black; }
+  .detailsLeft ul li {
+    display: inline-block;
+    color: #4175c1;
+    font-size: 2em;
+    font-weight: bold;
+    padding-left: 10px;
+    text-align: center;
+    width: 20%; }
+    .detailsLeft ul li span {
+      display: block;
+      font-size: 15px;
+      color: gray; }
+
+.friendsList, .mutualLocation, .friendsOfFriends, .suggestedFriends {
+  width: 60%;
+  float: left;
+  position: relative;
+  top: -25px; }
+  .friendsList h1, .mutualLocation h1, .friendsOfFriends h1, .suggestedFriends h1 {
+    font-style: italic; }
+  .friendsList ul, .mutualLocation ul, .friendsOfFriends ul, .suggestedFriends ul {
+    display: inline-block;
+    width: 50%;
+    height: 30%; }
+    .friendsList ul li, .mutualLocation ul li, .friendsOfFriends ul li, .suggestedFriends ul li {
+      display: inline-block;
+      padding: 10px;
+      background-color: #2f8004;
+      color: white;
+      width: 80%; }
+      .friendsList ul li:hover, .mutualLocation ul li:hover, .friendsOfFriends ul li:hover, .suggestedFriends ul li:hover {
+        background-color: #389905; }
+      .friendsList ul li a, .mutualLocation ul li a, .friendsOfFriends ul li a, .suggestedFriends ul li a {
+        color: white; }
+
+.mutualLocation {
+  z-index: 1;
+  display: block;
+  height: 0; }
+  .mutualLocation ul li {
+    position: relative;
+    top: 15px;
+    background-color: #ff19cb; }
+    .mutualLocation ul li:hover {
+      background-color: #ff4cd7; }
+
+.clear {
+  clear: both; }
+
+.suggestedFriends {
+  float: left; }
+  .suggestedFriends h1 {
+    font-style: italic; }
+
+.followUser {
+  background-color: #CDCCD1;
+  border: 1px solid #CDCCD1; }
+  .followUser:hover {
+    background-color: #e7e7e9;
+    color: black; }
+
+@media all and (max-width: 990px) {
+  .devStats ul li {
+    font-size: 2.5em;
+    padding-right: 10px; }
+    .devStats ul li span {
+      font-size: 0.3em; } }
+@media all and (max-width: 560px) {
+  .devName {
+    text-align: center; }
+
+  .sortBy button {
+    width: 50%;
+    display: block; }
+
+  .devStats {
+    text-align: center; }
+    .devStats ul li {
+      display: block;
+      font-size: 2em;
+      padding: 10px; }
+      .devStats ul li span {
+        font-size: 0.3em; }
+
+  .devDetails {
+    margin: 0 auto; }
+    .devDetails button {
+      float: left;
+      width: 50%; } }
+.friendsOfFriends ul li {
+  background-color: #3bcd16; }
+  .friendsOfFriends ul li:hover {
+    background-color: #53e92d; }
+
+.suggestedFriends ul li {
+  background-color: #ffb90a; }
+  .suggestedFriends ul li:hover {
+    background-color: #ffc83d; }
+
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none !important; }
