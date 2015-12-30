@@ -10,7 +10,7 @@ angular.module('directives').directive('followSingleUser', function($timeout){
         scope : {},
         link : function(scope, el, attrs){
             var toggle = false;
-            setTimeout(function () {
+            $timeout(function () {
                 scope.loginName = $('.devLogin').html();
                 scope.follow = localStorage.getItem(scope.loginName);
                 if(scope.follow){
@@ -20,7 +20,7 @@ angular.module('directives').directive('followSingleUser', function($timeout){
                     localStorage.removeItem(($('.devLogin').html()));
                     $(el).find('button').html('Follow');
                 }
-            }, 2000);
+            }, 10);
 
                 console.log(scope);
 
