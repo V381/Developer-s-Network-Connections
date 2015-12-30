@@ -20,7 +20,7 @@ angular.module('directives').directive('followSingleUser', function($timeout){
                     localStorage.removeItem(($('.devLogin').html()));
                     $(el).find('button').html('Follow');
                 }
-            }, 1000);
+            }, 2000);
 
                 console.log(scope);
 
