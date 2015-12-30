@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Developer's Network Connections</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link type="text/css" rel="stylesheet" href="client/stylesheets/main.css">
+    <link type="text/css" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+</head>
+
+
+<body ng-app="myApp" ng-cloak>
+
+
+<header class="container">
+    <h1>Connections</h1>
+</header>
+
+<hr/>
+
+<main ng-controller="mainCtrl">
+
+
+
+    <div class="container">
+
+        <section class="sortBy">
+            <form>
+                <!--<label>-->
+                    <!--<select>-->
+                        <!--<option selected="Sort By">Sort By</option>-->
+                        <!--<option value="NumberOfFollowers" ng-model="numOfFoll">Number of followers</option>-->
+                        <!--<option value="PublicRepos" ng-model="numOfRep">Public Repos</option>-->
+                        <!--<option value="LatestUpdated" ng-model="updated_at">Latest Updated</option>-->
+                    <!--</select>-->
+                <!--</label>-->
+            </form>
+
+            <section class="sortBy">Sort by :
+                <button ng-click="numOfFollz()" ng-model="numOfFoll">Number of followers</button>
+                <button ng-click="pubRepos()" ng-model="public_repos">Number of repositories</button>
+                <button ng-click="updatedAt()" ng-model="updated_at">Latest updated</button>
+                <button ng-click="defaultOrder()">Default Order</button>
+                <br/>
+                Search :
+                <form>
+                    <label>
+                        <input type="text" ng-model="search">
+                    </label>
+                </form>
+            </section>
+
+        </section>
+
+        <div class="dev" ng-repeat="i in allDevs | orderBy:numOfFoll | orderBy:numOfRep | orderBy:updated_at | filter:search">
+            <hr/>
+            <div class="devName">
+                <img src="{{i.avatar_url}}">
+                <a href="/api/user/{{i.id}}"><p class="devName">{{i.name}}</p></a>
+                <p>{{i.company}}</p>
+            </div>
+            <div class="devStats">
+                <ul>
+                    <li>{{i.following}}
+                    <span>Following </span>
+                    </li>
+
+                    <li>{{i.followers | nrFormat}}
+                    <span>Followers </span>
+                    </li>
+
+                    <li>{{i.public_repos}}
+                    <span>Repositories </span>
+                    </li>
+
+                </ul>
+            </div>
+            <div class="devDetails">
+                <follow></follow>
+                <a href="/api/user/{{i.id}}"><button class="details">Details</button></a>
+            </div>
+        </div>
+
+    </div>
+
+</main>
+
+
+<script src="/bower_components/angular/angular.js"></script>
+<script src="/bower_components/jquery/dist/jquery.js"></script>
+<script src="client/app.js"></script>
+<script src="bower_components/angular-route/angular-route.js"></script>
+<script src="/bower_components/angular-resource/angular-resource.js"></script>
+<script src="client/directives/_directives.js"></script>
+<script src="client/directives/followButton.js"></script>
+<script src="client/directives/followSingleUser.js"></script>
+<script src="client/filters/_filters.js"></script>
+<script src="client/filters/numUtils.js"></script>
+<script src="client/filters/strToNum.js"></script>
+<script src="client/services/_services.js"></script>
+<script src="client/services/dataProvider.js"></script>
+<script src="client/controllers/_controllers.js"></script>
+<script src="client/controllers/ConPageCtrl.js"></script>
+
+
+</body>
+</html>
