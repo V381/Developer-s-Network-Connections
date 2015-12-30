@@ -9,6 +9,21 @@ angular.module('directives').directive('followSingleUser', function($timeout){
         template: '<button class="followUser">Follow</button>',
         scope : {},
         link : function(scope, el, attrs){
+            var toggle = false;
+            $timeout(function () {
+                scope.loginName = $('.devLogin').html();
+                scope.follow = localStorage.getItem(scope.loginName);
+            
+                if(scope.follow){
+                    toggle = true;
+                    $(el).find('button').html('Unfollow');
+                }else{
+                    localStorage.removeItem(($('.devLogin').html()));
+                    $(el).find('button').html('Follow');
+                }
+            }, 2000);
+
+
             el.bind('click', function() {
                 if(toggle === false){
                     toggle = true;
@@ -23,14 +38,3 @@ angular.module('directives').directive('followSingleUser', function($timeout){
         }
     }
 });
-
-var toggle = false;
-var loginName = $('.devLogin').html();
-var follow = localStorage.getItem(scope.loginName);
-if(follow){
-    toggle = true;
-    $('.followUser').html('Unfollow');
-}else{
-    localStorage.removeItem(($('.devLogin').html()));
-    $('.followUser').html('Follow');
-}
