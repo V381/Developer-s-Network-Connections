@@ -22,7 +22,7 @@ angular.module('directives').directive('followSingleUser', function($timeout){
                     localStorage.removeItem(($('.devLogin').html()));
                     $(el).find('button').html('Follow');
                 }
-            }, 2000);
+            }, 100);
 
 
             el.bind('click', function() {
