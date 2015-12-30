@@ -3,14 +3,14 @@
  */
 
 
-angular.module('directives').directive('followSingleUser', function($interval){
+angular.module('directives').directive('followSingleUser', function($timeout){
     return {
         restrict : 'AE',
         template: '<button class="followUser">Follow</button>',
         scope : {},
         link : function(scope, el, attrs){
             var toggle = false;
-            setTimeout(function () {
+            $timeout(function () {
                 scope.loginName = $('.devLogin').html();
                 scope.follow = localStorage.getItem(scope.loginName);
             
