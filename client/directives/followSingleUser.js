@@ -3,18 +3,16 @@
  */
 
 
-angular.module('directives').directive('followSingleUser', function($interval){
+angular.module('directives').directive('followSingleUser', function($timeout){
     return {
         restrict : 'AE',
         template: '<button class="followUser">Follow</button>',
         scope : {},
         link : function(scope, el, attrs){
             var toggle = false;
-            $interval(function () {
+            $timeout(function () {
                 scope.loginName = $('.devLogin').html();
                 scope.follow = localStorage.getItem(scope.loginName);
-                console.log(scope);
-
                 if(scope.follow){
                     toggle = true;
                     $(el).find('button').html('Unfollow');
@@ -24,6 +22,7 @@ angular.module('directives').directive('followSingleUser', function($interval){
                 }
             }, 1000);
 
+                console.log(scope);
 
             el.bind('click', function() {
                 if(toggle === false){
