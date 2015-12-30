@@ -1,0 +1,11 @@
+{
+  "name": "Developer's_Network_connections",
+  "version": "0.0.1",
+  "scripts": {
+    "start" : "node app.js"
+  },
+  "dependencies": {
+    "ejs": "^2.3.4",
+    "express": "^4.13.3"
+  }
+}
