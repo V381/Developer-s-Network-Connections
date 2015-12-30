@@ -2,9 +2,10 @@
   "name": "Developer's_Network_connections",
   "version": "0.0.1",
   "scripts": {
-    "start" : "node app.js"
+    "start": "node app.js"
   },
   "dependencies": {
+    "bower": "^1.7.1",
     "ejs": "^2.3.4",
     "express": "^4.13.3"
   }
