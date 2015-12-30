@@ -1,0 +1,14 @@
+{
+  "name": "Developer's_Network_connections",
+  "description": "Bower conf",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "angular": "~1.4.8",
+    "angular-resource": "~1.4.8",
+    "angular-route": "~1.4.8",
+    "jquery": "~2.1.4",
+    "octicons": "~3.3.0",
+    "underscore": "~1.8.3"
+  }
+}
