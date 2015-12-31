@@ -29,10 +29,10 @@
         <h1 class="devMail"><span class="mega-octicon octicon-link"></span>
             <a class="relativePos" href={{info.blog}} target=_blank>{{info.blog}}</a></h1>
         <br/>
-        <a href="http://maps.google.com/?q={{info.location.zip}} {{info.location.city || info.location}}" target=_blank>
+        <a href="http://maps.google.com/?q={{info.location.zip}} {{info.location.city}}" target=_blank>
             <h1 class="devMail">
                 <span class="mega-octicon octicon-location"></span>
-                {{info.location.state}} {{info.location.city || info.location}}
+                {{info.location.state}} {{info.location.city}}
             </h1>
         </a>
         <p>{{info.bio}}</p>
@@ -58,17 +58,13 @@
 
 
     <section class="friendsList" ng-controller="detailsCtrl">
-
         <h1>Direct Friends:</h1>
-
         <ul ng-repeat="(key, value) in directFriends">
             <a href="/api/user/{{key}}"><li>{{value.name.charAt(0).toUpperCase() + value.name.slice(1)}} - #{{key}} </li></a>
         </ul>
-
     </section>
 
     <section class="friendsOfFriends">
-
         <h1>Friends Of Friends:</h1>
         <ul ng-repeat="(key, value) in friendsOfFriends">
             <a href="/api/user/{{key}}"><li ng-if="key != id && value != false">{{value.name}} - #{{key}}</li></a>
@@ -78,10 +74,6 @@
 
     <section class="suggestedFriends">
         <h1>Suggested friends:</h1>
-        <!--<ul ng-if="suggestedFriend != undefined">-->
-            <!--<a href="/api/user/{{suggestedFriend.id}}"><li ng-if="info.id != suggestedFriend.id">{{suggestedFriend.name}} - #{{suggestedFriend.id}}</li></a>-->
-        <!--</ul>-->
-
         <ul ng-repeat="i in rndsFriends">
             <a href="/api/user/{{i.id}}"><li ng-if="info.name != i.name">{{i.name}} - #{{i.id}}</li></a>
         </ul>
